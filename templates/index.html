@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <style src="/static/styles.css" rel="stylesheet"></style>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <script src="/static/app.js" defer></script>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark justify-content-center">
+        <!-- Navbar content -->
+        <h1 style="color: white; text-align: center">TechTop</h1>
+      </nav>
+      <br>
+      <div class="container">
+        <h4 style="text-align: center">Hey! Welcome to TechTop! Find it a hassle to pick the right laptop? No need to worry! With the help of our web application, we'll make sure you end up buying the best possible laptop based on your preferences.
+        At first, we kindly ask you to answer a couple of questions.</h4>
+
+      </div>
+      <br>
+        <form id="form">
+
+        <div class="container">
+            <div class="section">
+                <h4>1. From what brand would you like to have a laptop??</h4>
+                <hr>
+                <label>
+                    <input type="radio" name="question1" value="Apple" id="Apple" class="options"/>
+                    <span>Apple</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="question1" value="HP" id="HP" class="options" />
+                    <span>HP</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="question1" value="Asus" id="Asus" class="options"/>
+                    <span>Asus</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="question1" value="Lenovo" id="Lenovo" class="options" />
+                    <span>Lenovo</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="question1" value="Microsoft" id="Microsoft" class="options"/>
+                    <span>Microsoft</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="question1" value="Razer" id="Razer" class="options"/>
+                    <span>Razer</span>
+                </label>
+            </div>
+            <br>
+
+            <div class="section">
+            <h4>2. What is your budget??</h4>
+            <hr>
+                <label>
+                    <input type="radio" name="question2" value="500,1000" class="options"/>
+                    <span>Hella broke (€500-€1000)</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="question2" value="1001,2000" class="options"/>
+                    <span>Pretty broke (€1001-€2000)</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="question2" value="2001,5000" class="options"/>
+                    <span>Daddy's money (€2000++)</span>
+                </label>
+
+            </div>
+            <br>
+
+
+            <div class="section">
+            <h4>3. What is your desired weight for the laptop?</h4>
+            <hr>
+                <label>
+                    <input type="radio" name="question4" value="0.69,1.5" class="options"/>
+                    <span>0.69kg - 1.5kg</span>
+                </label>
+                <label>
+                    <input type="radio" name="question4" value="1.6,4" class="options"/>
+                    <span>1.6kg - 4kg</span>
+                </label>
+            </div>
+            <br>
+
+            <div class="section">
+            <h4>4. What screen size would you like to have?</h4>
+            <hr>
+                <label>
+                    <input type="radio" name="question5" value="10.1,12.5" class="options"/>
+                    <span>Small(10.1"- 12.5")</span>
+                </label>
+                <label>
+                    <input type="radio" name="question5" value="12.6,15.0" class="options"/>
+                    <span>Medium(12.6"- 15.0")</span>
+                </label>
+                <label>
+                    <input type="radio" name="question5" value="15.1,18.4" class="options"/>
+                    <span>Big (>15.0")</span>
+                </label>
+            </div>
+            <br>
+
+            <div class="section">
+                <h4>5. Do you want the laptop to be used for gaming purposes?</h4>
+                <hr>
+                <label>
+                    <input type="radio" name="question3" value="Gaming" class="options"/>
+                    <span>Yes</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="question3" value="No Gaming" class="options"/>
+                    <span>No</span>
+                </label>
+            </div>
+            <br>
+
+
+            <div class="section">
+                <h4>6. Would you like the laptop to have touchscreen?</h4>
+                <hr>
+                    <label>
+                        <input type="radio" name="question6" value="Touchscreen" class="options" />
+                        <span>Yes</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="question6" value="No Touch Screen" class="options"/>
+                        <span>No</span>
+                    </label>
+            </div>
+            <br>
+            <input type="submit" value = "Submit">
+
+        </div>
+            </form>
+
+        <div class="container">
+            <p id="note" style="display:none">Note: Should no results appear, then this most likely means that the criteria do not match with any of the considered laptops. Please try changing your criteria.</p>
+        </div>
+        <br>
+
+<div class="container" style="justify-content: center">
+    <div class="row">
+        <div class="col" >
+            <h3>Option 1:</h3>
+                <table id="table1" class="table table-bordered" style="table-layout: fixed; width: 100%">
+                    <tbody>
+                    <tr>
+                        <td colspan="2">Modelname 1</td>
+                    </tr>
+                    <tr>
+                        <td>Manufacturer</td>
+                        <td>Price</td>
+                    </tr>
+                    <tr>
+                        <td>CPU</td>
+                        <td>RAM</td>
+                    </tr>
+                    <tr>
+                        <td>Storage</td>
+                        <td>GPU</td>
+                    </tr>
+                    <tr>
+                        <td>Screen</td>
+                        <td>Screensize</td>
+                    </tr>
+                    <tr>
+                        <td>Weight</td>
+                        <td>OS</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+        <div class="col justify-content-center">
+            <h3>Option 2:</h3>
+            <table id="table2" class="table table-bordered" style="table-layout: fixed; width: 100%">
+                <tbody>
+                <tr>
+                    <td colspan="2">Modelname 2</td>
+                </tr>
+                <tr>
+                    <td>Manufacturer</td>
+                    <td>Price</td>
+                </tr>
+                <tr>
+                    <td>CPU</td>
+                    <td>RAM</td>
+                </tr>
+                <tr>
+                    <td>Storage</td>
+                    <td>GPU</td>
+                </tr>
+                <tr>
+                    <td>Screen</td>
+                    <td>Screensize</td>
+                </tr>
+                <tr>
+                    <td>Weight</td>
+                    <td>OS</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <h5 id="info" style="text-align: center; display: none">According to your preferences, both of these options seem like viable options for you!</h5>
+
+</div>
+
+<br>
+<div class="container">
+<h4>Don't know what the different parts of a computer mean? Here is a quick beginner's guide to learn more:</h4>
+<ul>
+    <li>CPU: Stands for Central Processing Unit and it's the processor, essentially the brain, of a computer.
+        Generally, the higher the numbers, the better the CPU.
+    </li>
+    <li>RAM: Stands for Random Access Memory (can also be considered as short-term memory).
+        The more RAM, the better, because the computer can then execute more processes at once efficiently.
+    </li>
+    <li>GPU: Stands for Graphics Processing Unit.
+        This refers to the part in the computer that is responsible for the graphics in videos and games.
+    </li>
+    <li>Screen (Resolution): When looking at the screen, you might see something like this: 2560x1600 (or something slightly different).
+        This refers to the screen's resolution. The higher the numbers, the more pixels. The more pixels, the sharper and more detailed your screen will look like. 
+    </li>
+</ul>
+</div>
+
+<footer style="text-align: center; padding: 3px; background-color: #212529; color: white">
+    <p>Hope we can help you out!</p>
+</footer>
+
+</body>
+
+</html>
+

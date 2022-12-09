@@ -1,0 +1,23 @@
+#table1 {
+    width: 100%;
+    text-align: center;
+}
+
+#nav {
+    color: white;
+    text-align: center;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+.section {
+    padding: 0.5rem 2rem 1rem 2rem;
+}
+
+
